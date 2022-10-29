@@ -51,7 +51,7 @@ app.use((err, req, res, next) => {
 
 
 // App listern
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
     connect();
     console.log("connected to backend");
 });
