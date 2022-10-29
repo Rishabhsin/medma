@@ -34,8 +34,7 @@ app.use(express.json());
 app.use(cors());
 app.use("/api/doctor", doctorRoute);
 app.use("/api/patient", patientRout);
-app.use("/",(res,req)=>{
-res.send("Home")})
+
 // app.use("/api/auth", authRoute);
 // app.use("/api/ngo", ngosRoute);
 
