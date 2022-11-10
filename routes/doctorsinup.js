@@ -7,7 +7,7 @@ router.post('/',createDoctor);
 router.put('/:id', updatedoctor);
 router.delete('/:id',deletedoctor);
 router.get('/:id',getdoctor);
-router.get('/:id',getdoctors);
+router.get('/',getdoctors);
 
 
 export default router;
