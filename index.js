@@ -4,9 +4,7 @@ import cors from "cors";
 import mongoose from "mongoose";
 import doctorRoute from "./routes/doctorsinup.js";
 import patientRout from "./routes/patientsinup.js";
-// import donarRoute from "./routes/donar.js"
-// import authRoute from "./routes/auth.js";
-// import ngosRoute from "./routes/ngo.js";
+
 
 
 //App config
@@ -34,7 +32,6 @@ app.use(express.json());
 app.use(cors());
 app.use("/api/doctor", doctorRoute);
 app.use("/api/patient", patientRout);
-
 // app.use("/api/auth", authRoute);
 // app.use("/api/ngo", ngosRoute);
 
@@ -51,7 +48,7 @@ app.use((err, req, res, next) => {
 
 
 // App listern
-app.listen(process.env.PORT, () => {
+app.listen(3000, () => {
     connect();
     console.log("connected to backend");
 });
