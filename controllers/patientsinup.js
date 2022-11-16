@@ -31,3 +31,20 @@ export const deletePatient= async(req, res, next) =>{
         
     }
 }
+
+export const getpatient = async (req, res, next) => {
+    try {
+        const patient = await Patient.findById(req.params.id)
+        res.status(200).json(patient);
+    } catch (err) {
+        next(err);
+    }
+}
+export const getpatients = async (req, res, next) => {
+    try {
+        const patients = await Patient.find(req.params.id)
+        res.status(200).json(patients);
+    } catch (err) {
+        next(err);
+    }
+}
