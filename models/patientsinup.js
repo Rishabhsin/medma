@@ -13,7 +13,7 @@ const patientSinupSchema = mongoose.Schema({
     },
     
     phoneNumber: {
-        type: Number,
+        type: String,
         require: true
     },
 
