@@ -24,7 +24,7 @@ export const updatePatient= async (req, res, next) => {
 export const deletePatient= async(req, res, next) =>{
     try { 
         await Patient.findByIdAndDelete(req.params.id);
-        res.status(200).jso("Delete Patient Successful");
+        res.status(200).json("Delete Patient Successful");
 
     } catch (error) {
         next(err)
