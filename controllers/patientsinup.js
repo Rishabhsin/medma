@@ -42,7 +42,7 @@ export const getpatient = async (req, res, next) => {
 }
 export const getpatients = async (req, res, next) => {
     try {
-        const patients = await Patient.find(req.params.id)
+        const patients = await Patient.find()
         res.status(200).json(patients);
     } catch (err) {
         next(err);
