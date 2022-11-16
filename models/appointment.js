@@ -7,7 +7,7 @@ name:{
 },
 
 age:{
-    type: Number,
+    type: String,
     require: trusted,
 },
 
@@ -22,7 +22,7 @@ symptom:{
 },
 
 date:{
-    type: Number,
+    type: String,
     require: true
 },
 
@@ -37,7 +37,7 @@ email:{
 },
 
 phone:{
-    type: Number,
+    type: String,
     require: true
 }
 });
