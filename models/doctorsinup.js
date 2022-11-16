@@ -18,7 +18,7 @@ const doctorSinupSchema = mongoose.Schema({
     },
     
     phoneNumber: {
-        type: Number,
+        type: String,
         require: true
     },
 
@@ -28,7 +28,7 @@ const doctorSinupSchema = mongoose.Schema({
     },
 
     adharNumber: {
-        type: Number,
+        type: String,
         require: true
     },
    
@@ -48,7 +48,7 @@ const doctorSinupSchema = mongoose.Schema({
     },
 
     licenceNumber: {
-        type: Number,
+        type: String,
         require: true
     },
     
