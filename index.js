@@ -4,6 +4,7 @@ import cors from "cors";
 import mongoose from "mongoose";
 import doctorRoute from "./routes/doctorsinup.js";
 import patientRout from "./routes/patientsinup.js";
+import appointment from "./routes/appointment.js";
 
 
 
@@ -32,6 +33,7 @@ app.use(express.json());
 app.use(cors());
 app.use("/api/doctor", doctorRoute);
 app.use("/api/patient", patientRout);
+app.use("/api/appointment", appointment);
 app.use("/", (req,res)=>{
     res.status(200).json("Hello from home page")
 })
