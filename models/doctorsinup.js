@@ -1,4 +1,4 @@
-import mongoose, { model } from "mongoose";
+import mongoose from "mongoose";
 
 const doctorSinupSchema = mongoose.Schema({
 
@@ -32,6 +32,21 @@ const doctorSinupSchema = mongoose.Schema({
         require: true
     },
    
+    clinicName: {
+        type: String,
+        require: true
+    },
+
+    address: {
+        type: String,
+        require: true
+    },
+
+    time: {
+        type: String,
+        require: true
+    },
+
     licenceNumber: {
         type: Number,
         require: true
