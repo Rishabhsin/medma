@@ -1,4 +1,4 @@
-import patient from "../models/patientsinup.js";
+import Patient from "../models/patientsinup.js";
 
 
 export const createPatient = async(req,res)=>{
