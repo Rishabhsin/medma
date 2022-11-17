@@ -36,7 +36,7 @@ export const sign = async (req,res,next) => {
     const email = req.params.email;
     const password = req.params.password;
     try{
-        const patient1=await doctor.find({email:email,password:password});
+        const patient1=await Patient.find({email:email,password:password});
         if(patient1[0] == null)
         {
             res.send({"success":false});
