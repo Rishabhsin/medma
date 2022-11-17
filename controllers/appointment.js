@@ -13,6 +13,14 @@ export const createAppointment= async(req,res)=>{
     }
 }
 
+export const getappointmentbydoc = async (req, res, next) => {
+    try {
+        const appointments1 = await appointment.find({"doctorname":req.params.id})
+        res.status(200).json(appointments1);
+    } catch (err) {
+        next(err);
+    }
+}
 
 
 export const updateAppointment= async (req, res, next) => {
