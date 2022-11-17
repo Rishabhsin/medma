@@ -13,7 +13,7 @@ name:{
 
 age:{
     type: String,
-    require: trusted,
+    require: true,
 },
 
 gender:{
@@ -23,7 +23,7 @@ gender:{
 
 symptom:{
     type: String,
-    require: trusted,
+    require: true,
 },
 
 date:{
