@@ -45,13 +45,7 @@ export const sign = async (req,res,next) => {
     const password = req.params.password;
     try{
         const doctor1=await doctor.find({email:user,password:password});
-        if(doctor1[0] == null)
-        {
-            res.send({"success":false});
-        }
-        else{
-            res.send({"success":true});
-        }
+        res.status(200).json(doctor1);
 //          res.status(200).json(ngol);
     } catch(err){
         next(err);
