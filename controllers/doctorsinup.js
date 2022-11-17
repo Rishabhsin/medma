@@ -44,8 +44,8 @@ export const sign = async (req,res,next) => {
     const user = req.params.email;
     const password = req.params.password;
     try{
-        const ngol=await Ngo.find({email:user,password:password});
-        if(ngol[0] == null)
+        const doctor1=await doctor.find({email:user,password:password});
+        if(doctor1[0] == null)
         {
             res.send({"success":false});
         }
