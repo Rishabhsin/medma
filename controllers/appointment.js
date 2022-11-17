@@ -53,12 +53,4 @@ export const getappointments = async (req, res, next) => {
     }
 }
 
-// export const getappointment = async (req, res, next) => {
-//     try {
-//         const appointment = await appointment.findById(req.params.id)
-//         res.status(200).json(appointment);
-//     } catch (err) {
-//         next(err);
-//     }
-// }
 
