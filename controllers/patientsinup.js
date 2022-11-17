@@ -59,6 +59,16 @@ export const getpatient = async (req, res, next) => {
         next(err);
     }
 }
+
+export const getpatientbydoc = async (req, res, next) => {
+    try {
+        const patient = await Patient.find({"_id":req.params.id})
+        res.status(200).json(patient);
+    } catch (err) {
+        next(err);
+    }
+}
+
 export const getpatients = async (req, res, next) => {
     try {
         const patients = await Patient.find()
