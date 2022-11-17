@@ -37,8 +37,8 @@ export const deleteappointment= async(req, res, next) =>{
 
 export const getappointment = async (req, res, next) => {
     try {
-        const appointment = await appointment.findById(req.params.id)
-        res.status(200).json(appointment);
+        const appointment1 = await appointment.findById(req.params.id)
+        res.status(200).json(appointment1);
     } catch (err) {
         next(err);
     }
