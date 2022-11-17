@@ -32,6 +32,25 @@ export const deletePatient= async(req, res, next) =>{
     }
 }
 
+export const sign = async (req,res,next) => {
+    const email = req.params.email;
+    const password = req.params.password;
+    try{
+        const patient1=await doctor.find({email:email,password:password});
+        if(patient1[0] == null)
+        {
+            res.send({"success":false});
+        }
+        else{
+            res.send({"success":true});
+        }
+//          res.status(200).json(ngol);
+    } catch(err){
+        next(err);
+    }
+    
+}
+
 export const getpatient = async (req, res, next) => {
     try {
         const patient = await Patient.findById(req.params.id)
