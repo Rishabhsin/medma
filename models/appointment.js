@@ -1,6 +1,11 @@
 import mongoose, { trusted } from "mongoose";
 const appointmentBookSchema = mongoose.Schema({
 
+doctorname:{
+    type: String,
+    require: true
+},
+    
 name:{
     type: String,
     require: true
