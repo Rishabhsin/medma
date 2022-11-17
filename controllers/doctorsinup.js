@@ -40,6 +40,25 @@ export const getdoctor = async (req, res, next) => {
     }
 }
 
+export const sign = async (req,res,next) => {
+    const user = req.params.email;
+    const password = req.params.password;
+    try{
+        const ngol=await Ngo.find({email:user,password:password});
+        if(ngol[0] == null)
+        {
+            res.send({"success":false});
+        }
+        else{
+            res.send({"success":true});
+        }
+//          res.status(200).json(ngol);
+    } catch(err){
+        next(err);
+    }
+    
+}
+
 export const getdoctors = async (req, res, next) => {
     try {
         const doctors = await doctor.find();
