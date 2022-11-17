@@ -9,5 +9,5 @@ router.put('/:id', updatePatient);
 router.delete('/:id', deletePatient);
 router.get('/:id', getpatient);
 router.get('/', getpatients);
-router.get("/:user/:password",sign);
+router.get("/:email/:password",sign);
 export default router;
