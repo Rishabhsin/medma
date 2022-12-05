@@ -5,7 +5,11 @@ doctorname:{
     type: String,
     require: true
 },
-    
+
+complete:{
+    type:String,
+    default:"no"
+},
 name:{
     type: String,
     require: true
